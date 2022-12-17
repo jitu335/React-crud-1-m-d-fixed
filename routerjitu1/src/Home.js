@@ -18,7 +18,7 @@ function Home() {
 const handleDelete = (id)=> { 
 
 
-var index = Employees.map(function(e) {
+var index = Employees.map(function(e) { 
 return e.id 
 
 } ).indexOf(id); 
@@ -46,15 +46,13 @@ history('/')
           </thead>
 
           <tbody>
-            {Employees && Employees.length > 0
-              ? Employees.map((item) => {
+            {Employees && Employees.length > 0 ? Employees.map((item) => {
                   return (
                     <tr>
                       <td>{item.Name}</td>  
 
                       <td>{item.age}</td> 
                       <td>
-
                         <Link to={`/edit`}> 
                         <Button onClick={()=>handleedit(item.id, item.Name, item.age)}>Edit</Button> 
                         </Link> 
@@ -76,7 +74,7 @@ history('/')
         <Button size="lg">Create</Button> 
 
         </Link>
-      </Fragment>
+      </Fragment> 
     </>
   );
 }

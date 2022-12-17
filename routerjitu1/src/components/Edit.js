@@ -23,12 +23,12 @@ function Edit () {
 
         const handleSubmit = (e) => { 
 
-            e.preventDefult()
+            e.preventDefault() 
 
             
             let a = Employees[index];  
-            a.Name = name;  
-            a.age = age; 
+            a.Name = name;   
+            a.age = age;  
              
             
             history('/'); 
@@ -41,20 +41,19 @@ function Edit () {
           setId(localStorage.getItem('Id'))  
            }, [])
 
-return (
+return ( 
 
 <>
-<h3>fghdf</h3> 
 
 <Form className= 'd-grid gap=2' style={{margin: '15rem'}}>
 
 <Form.Group className="mb-3" controlId="formName">
-<Form.Control type='text' placeholder="Enter name" value={name} required onChange= {(e)=> setName(e.target.value)}>  
+<Form.Control  placeholder="Enter name" value={name} required onChange= {(e)=> setName(e.target.value)}>  
 </Form.Control>
 </Form.Group>
 
 <Form.Group className="mb-3" controlId="formage"> 
-<Form.Control type='text' placeholder="Enter name" value={age} required onChange= {(e)=> setAge(e.target.value)}>  
+<Form.Control  placeholder="Enter age" value={age} required onChange= {(e)=> setAge(e.target.value)}>  
 </Form.Control> 
 
 </Form.Group>

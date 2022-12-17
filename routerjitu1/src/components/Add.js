@@ -7,7 +7,7 @@ import React, { Fragment, useState } from "react";
 import Employees from './Employees'; 
 
 
-function Add () {
+function Add () { 
 
 const [name, setName]=useState('')   
     const [age, setAge]=useState('')  
@@ -16,16 +16,16 @@ const [name, setName]=useState('')
 
        const handleSubmit = (e) => { 
 
-        e.preventDefult()
+        e.preventDefault();  
 
-        const ids = uuid();
+        const ids = uuid(); 
 
-        let uniqueId = ids.slice(0,8) 
+        let uniqueId = ids.slice(0,8)  
         
-        let a = name,
-         b = age
+        let a = name, 
+         b = age 
 
-         Employees.push({id: uniqueId, name: a, age: b})
+         Employees.push({id: uniqueId, Name: a, age: b}) 
          
          history('/'); 
        }
@@ -36,22 +36,21 @@ return (
 
 <>
 
-<h3>fghdf</h3>
-
 <Form className= 'd-grid gap=2' style={{margin: '15rem'}}>
 
 <Form.Group className="mb-3" controlId="formName">
-<Form.Control type='text' placeholder="Enter name" required onChange= {(e)=> setName(e.target.value)}>  
+<Form.Control  placeholder="Enter name" required onChange= {(e)=> setName(e.target.value)}>  
 </Form.Control>
 </Form.Group>
 
 <Form.Group className="mb-3" controlId="formage"> 
-<Form.Control type='text' placeholder="Enter name" required onChange= {(e)=> setAge(e.target.value)}>  
+<Form.Control  placeholder="Enter age" required onChange= {(e)=> setAge(e.target.value)}>  
 </Form.Control> 
 
 </Form.Group>
 
-<Button onClick={()=> handleSubmit(e)} type='submit' >submit</Button> 
+<Button onClick={(e)=> handleSubmit(e)} type='submit' >submit</Button> 
+
 </Form>
 
 </>

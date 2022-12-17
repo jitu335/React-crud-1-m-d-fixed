@@ -7,7 +7,7 @@ import React, { Fragment, useState } from "react";
 import Employees from './Employees'; 
 
 
-function Edit () {
+function Edit () { 
 
     const [name, setName]=useState('')   
     const [age, setAge]=useState('')
@@ -23,7 +23,7 @@ function Edit () {
 
         const handleSubmit = (e) => { 
 
-            e.preventDefault() 
+            e.preventDefault(); 
 
             
             let a = Employees[index];  
@@ -31,14 +31,15 @@ function Edit () {
             a.age = age;  
              
             
-            history('/'); 
+            history('/');  
+
            }
 
            useEffect (()=> { 
  
           setName(localStorage.getItem('Name')) 
           setAge(localStorage.getItem('age')) 
-          setId(localStorage.getItem('Id'))  
+          setId(localStorage.getItem('id'))  
            }, [])
 
 return ( 
@@ -58,7 +59,7 @@ return (
 
 </Form.Group>
 
-<Button onClick={()=> handleSubmit(e)} type='submit' >Update</Button> 
+<Button onClick={(e)=> handleSubmit(e)} type='submit' >Update</Button> 
 </Form> 
 
 

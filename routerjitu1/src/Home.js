@@ -9,8 +9,8 @@ function Home() {
 
     const handleedit = (id, name, age)=> {
     
-        localStorage.setItem('Name', name) 
-        localStorage.setItem('age', age)
+        localStorage.setItem('Name', name)  
+        localStorage.setItem('age', age) 
         localStorage.setItem('id', id)  
 
     }
@@ -18,7 +18,7 @@ function Home() {
 const handleDelete = (id)=> { 
 
 
-var index = Employees.map(function(e) { 
+var index = Employees.map(function(e) {  
 return e.id 
 
 } ).indexOf(id); 

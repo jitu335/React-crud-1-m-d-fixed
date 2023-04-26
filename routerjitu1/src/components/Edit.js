@@ -40,7 +40,7 @@ function Edit () {
           setName(localStorage.getItem('Name')) 
           setAge(localStorage.getItem('age')) 
           setId(localStorage.getItem('id'))  
-           }, [])
+           }, []) 
 
 return ( 
 

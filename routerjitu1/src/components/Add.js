@@ -9,7 +9,7 @@ import Employees from './Employees';
 
 function Add () { 
 
-const [name, setName]=useState('')   
+    const [name, setName]=useState('')   
     const [age, setAge]=useState('')  
 
     let history = useNavigate() 
@@ -33,9 +33,7 @@ const [name, setName]=useState('')
 
 
 return (
-
 <>
-
 <Form className= 'd-grid gap=2' style={{margin: '15rem'}}>
 
 <Form.Group className="mb-3" controlId="formName">
@@ -46,19 +44,15 @@ return (
 <Form.Group className="mb-3" controlId="formage"> 
 <Form.Control  placeholder="Enter age" required onChange= {(e)=> setAge(e.target.value)}>  
 </Form.Control> 
-
 </Form.Group>
 
 <Button onClick={(e)=> handleSubmit(e)} type='submit' >submit</Button> 
 
 </Form>
-
 </>
-
 
 )
 }
-
 export default Add;
 
 

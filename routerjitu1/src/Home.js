@@ -8,7 +8,7 @@ function Home() {
     let history = useNavigate(); 
 
     const handleedit = (id, name, age)=> {
-    
+     
         localStorage.setItem('Name', name)  
         localStorage.setItem('age', age) 
         localStorage.setItem('id', id)  
@@ -41,12 +41,13 @@ history('/')
 
               <th>Age</th>
 
-              <th>Action</th>
+              <th>Action</th> 
             </tr>
           </thead>
 
           <tbody>
-            {Employees && Employees.length > 0 ? Employees.map((item) => {
+            {
+              Employees && Employees.length > 0 ? Employees.map((item) => {
                   return (
                     <tr>
                       <td>{item.Name}</td>  
@@ -70,9 +71,7 @@ history('/')
         <br></br>
 
         <Link  to='/create'>  
-
         <Button size="lg">Create</Button> 
-
         </Link>
       </Fragment> 
     </>
